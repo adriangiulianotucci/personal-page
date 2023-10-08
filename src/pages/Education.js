@@ -89,7 +89,7 @@ export default function Education() {
       <p className="text-xl mb-5">{data[lang].title}</p>
 
       {data[lang].values.map((elem) => (
-        <div className="flex gap-5 mb-5">
+        <div className="flex gap-5 mb-5" key={elem.institution}>
           <Image src={elem.logoUrl} className="w-12 h-12" alt={elem.company} />
           <div>
             <p className="text-sm text-gray-500">
@@ -100,7 +100,7 @@ export default function Education() {
 
             <div className="flex flex-wrap gap-1">
               {elem.skills.map((item) => (
-                <Pill label={item} />
+                <Pill key={item} label={item} />
               ))}
             </div>
           </div>

@@ -91,7 +91,7 @@ export default function Experience() {
       <p className="text-xl mb-5">{data[lang].title}</p>
 
       {data[lang].values.map((elem) => (
-        <div className="flex gap-5 mb-5">
+        <div key={elem.role} className="flex gap-5 mb-5">
           <Image src={elem.logoUrl} className="w-12 h-12" alt={elem.company} />
           <div>
             <p className="text-sm text-gray-500">
@@ -103,7 +103,7 @@ export default function Experience() {
 
             <div className="flex flex-wrap gap-1">
               {elem.skills.map((item) => (
-                <Pill label={item} />
+                <Pill key={item} label={item} />
               ))}
             </div>
           </div>

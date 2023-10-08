@@ -35,7 +35,7 @@ export default function Skills() {
       <p className="text-xl mb-5">{data[lang].title}</p>
       <div className="flex flex-wrap gap-2">
         {data[lang].values.map((item) => (
-          <Pill label={item} />
+          <Pill key={item} label={item} />
         ))}
       </div>
     </div>

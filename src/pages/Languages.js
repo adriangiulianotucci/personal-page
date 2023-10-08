@@ -26,7 +26,7 @@ export default function Languages() {
       <p className="text-xl mb-5">{data[lang].title}</p>
       <div>
         {data[lang].values.map((item) => (
-          <div className="flex justify-between">
+          <div key={item.label} className="flex justify-between">
             <p>
               {/* <span className={`fi fi-${item.icon}`} /> */}
               {item.label}
